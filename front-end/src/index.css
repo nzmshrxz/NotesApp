@@ -1,0 +1,176 @@
+/* Body with cartoon background */
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-image: url('https://cdn.pixabay.com/photo/2020/05/29/15/09/the-little-prince-5235474_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;  /* PAGE SCROLL NAHI HOGA */
+}
+
+
+/* Notepad container box */
+.notepad {
+  max-width: 700px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 40px auto;
+  padding: 25px 15px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 5px dashed #ff9f43;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;            /* Bahar ka scroll block */
+}
+
+
+/* App title */
+.notepad h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #ff7675;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+/* Input + Button styling */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.input-container input {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 15px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.input-container button {
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-container button:hover {
+  background-color: #e55039;
+}
+
+
+/* Notes list */
+.notes-list {
+  list-style: none;
+  padding: 20px 10px;
+  background: white;
+  border-radius: 12px;
+  flex: 1;                       /* Remaining space lega */
+  overflow-y: auto;              /* INTERNAL SCROLL */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.notes-list::-webkit-scrollbar {
+  display: none;
+}
+
+.note-item {
+ background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+  list-style: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE and Edge */
+}
+
+
+.note-item:hover {
+  transform: scale(1.02);
+}
+
+.note-item button {
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 10px;
+  margin-left: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.note-item button:hover {
+  background-color: #e55039;
+}
+
+
+/* Loading text */
+.loading-text {
+  text-align: center;
+  color: #ff7675;
+  font-weight: bold;
+  margin: 15px 0;
+  font-size: 1.1rem;
+}
+
+
+/* Credit */
+.credit {
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #555;
+  text-align: center;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+.credit::after {
+  content: " 😉";
+  font-size: 16px;
+}
+
+
+/* Responsive */
+@media(max-width: 600px){
+  .notepad {
+    max-width: 80%;
+    height: 79vh;
+    padding: 15px 10px;
+  }
+
+  .input-container input {
+    width: 100%;
+  }
+
+  .input-container button {
+    width: 100%;
+    margin-left: 0;
+  }
+}
