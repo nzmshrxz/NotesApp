@@ -1,6 +1,7 @@
-# 📝 Foxy Notes App
+# 📝 Foxy Notes App Made with ❤️ by Nazam Shiraz
 
 A funky cartoon-themed CRUD Notes App built using **ReactJS** and **Node.js (Express)** for backend. Users can **add, edit, delete, and view** their notes in a stylish, responsive notepad interface.
+Built this project for learning and practicing Full Stack Development.
 
 ## 🚀 Features
 
@@ -26,9 +27,13 @@ A funky cartoon-themed CRUD Notes App built using **ReactJS** and **Node.js (Exp
 ```bash
 git clone https://github.com/your-username/NotesApp.git 
 ➡️ Make sure your backend is running on http://localhost:5000 before using the frontend.
-🙋‍♂️ About Me
-Made with ❤️ by Nazam Shiraz
 
-Built this project for learning and practicing Full Stack Development.
-📄 License
-Free to use and modify.
+
+cd client
+npm install
+npm start
+
+cd server
+npm install
+node index.js
+
